@@ -21,12 +21,8 @@ Arduino library for the LTC2625 – an 8-channel, 12-bit I²C Digital-to-Analog 
 ## Installation
 
 Arduino IDE:
-- Library Manager: Search for LTC2625 (once published).
+- Library Manager: Search for LTC2625.
 - Manual: Download ZIP and use Sketch → Include Library → Add .ZIP Library.
-
-PlatformIO:
-- Add to platformio.ini: lib_deps = yourusername/LTC2625
-
 ---
 
 ## Quick Usage Example
