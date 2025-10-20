@@ -11,10 +11,10 @@
     }
   ],
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/LTC2625",
+  "homepage": "https://github.com/skipperwraith/LTC2625",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/LTC2625.git"
+    "url": "https://github.com/skipperwraith/LTC2625.git"
   },
   "frameworks": ["arduino"],
   "platforms": ["*"],
@@ -29,9 +29,7 @@
       ".github",
       ".vscode",
       "docs",
-      "tests",
-      "CI",
-      "scripts"
+      "tests"
     ]
   }
 }
