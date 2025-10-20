@@ -1,0 +1,37 @@
+{
+  "name": "LTC2625",
+  "version": "0.0.1",
+  "description": "Arduino library for the LTC2625 8-channel 12-bit I2C DAC (write, update, power-down, masked array writes).",
+  "keywords": "dac, i2c, analog, ltc2625, analog devices, linear technology",
+  "authors": [
+    {
+      "name": "Skipper Wraith",
+      "email": "skipperwraith@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/LTC2625",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/LTC2625.git"
+  },
+  "frameworks": ["arduino"],
+  "platforms": ["*"],
+  "headers": ["LTC2625.h"],
+
+  "examples": [
+    "examples/*/*.ino"
+  ],
+
+  "export": {
+    "exclude": [
+      ".github",
+      ".vscode",
+      "docs",
+      "tests",
+      "CI",
+      "scripts"
+    ]
+  }
+}

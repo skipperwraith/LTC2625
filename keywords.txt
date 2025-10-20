@@ -1,0 +1,47 @@
+#######################################
+# Syntax Coloring Map For LTC2625
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+LTC2625    KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin    KEYWORD2
+isConnected    KEYWORD2
+setAddress    KEYWORD2
+getAddress    KEYWORD2
+write    KEYWORD2
+update    KEYWORD2
+write_one_n_update_all    KEYWORD2
+write_n_update    KEYWORD2
+power_down    KEYWORD2
+manual    KEYWORD2
+write_array    KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+LTC2625_LIB_VERSION    LITERAL1
+LTC2625_INITIAL_VALUE    LITERAL1
+LTC2625_DEFAULT_ADDRESS    LITERAL1
+LTC2625_BROADCAST_ADDRESS    LITERAL1
+
+LTC2625_WRITE    LITERAL1
+LTC2625_POWER_UP    LITERAL1
+LTC2625_MISC    LITERAL1
+LTC2625_WRITE_UPDATE    LITERAL1
+LTC2625_POWER_DOWN    LITERAL1
+
+LTC2625_DAC_A    LITERAL1
+LTC2625_DAC_B    LITERAL1
+LTC2625_DAC_C    LITERAL1
+LTC2625_DAC_D    LITERAL1
+LTC2625_DAC_E    LITERAL1
+LTC2625_DAC_F    LITERAL1
+LTC2625_DAC_G    LITERAL1
+LTC2625_DAC_H    LITERAL1
+LTC2625_DAC_ALL    LITERAL1
