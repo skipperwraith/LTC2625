@@ -18,11 +18,9 @@ jobs:
           compliance: strict
 
       - name: Create archive that includes .github (exclude only VCS metadata)
-        if: github.event_name == 'release'
         run: zip -r "LTC2625-${{ github.ref_name }}.zip" . -x ".github/*"
 
       - name: Upload archive to GitHub Release
-        if: github.event_name == 'release'
         uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
