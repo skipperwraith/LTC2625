@@ -1,10 +1,30 @@
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: arduino/arduino-lint-action@v2
+      - name: Checkout Git Repository
+        uses: actions/checkout@v4
+
+      - name: Lint Arduino related Code
+        uses: arduino/arduino-lint-action@v2
         with:
           library-manager: update
           compliance: strict
+
+      - name: Create archive that includes .github (exclude only VCS metadata)
+        if: github.event_name == 'release'
+        run: zip -r "LTC2625-${{ github.ref_name }}.zip" . -x ".github/*"
+
+      - name: Upload archive to GitHub Release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: "LTC2625-${{ github.ref_name }}.zip"
