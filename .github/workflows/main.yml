@@ -17,12 +17,15 @@ jobs:
           library-manager: update
           compliance: strict
 
+      - name: Sanitize ref name for artifact filename
+        run: echo "SAFE_REF=${GITHUB_REF_NAME//\//-}" >> $GITHUB_ENV
+
       - name: Create archive that includes .github (exclude only VCS metadata)
-        run: zip -r "LTC2625-${{ github.ref_name }}.zip" . -x ".github/*"
+        run: zip -r "LTC2625-${{ env.SAFE_REF }}.zip" . -x ".git/*"
 
       - name: Upload archive to GitHub Release
         uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: "LTC2625-${{ github.ref_name }}.zip"
+          files: "LTC2625-${{ env.SAFE_REF }}.zip"
